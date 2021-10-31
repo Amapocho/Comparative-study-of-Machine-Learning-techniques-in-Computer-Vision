@@ -16,7 +16,7 @@ I tried both ResNet as well as a vanilla model and expectedly ResNet gave a bett
 ### Data Augmentation
 
 Augmenting the data by adding transformations helped reduce overfitting. The transformations
-were : <br><br>
+were : <br>
 • Random Horizontal Flip <br>
 • Random Rotation with a range of 10° <br>
 • Colour Jitter – Brightness and Contrast with a range of 0.2, Hue and Saturation with a range of 0.1
