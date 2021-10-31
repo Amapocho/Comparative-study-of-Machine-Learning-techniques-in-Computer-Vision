@@ -17,8 +17,8 @@ I tried both ResNet as well as a vanilla model and expectedly ResNet gave a bett
 
 Augmenting the data by adding transformations helped reduce overfitting. The transformations
 were: -
-• Random Horizontal Flip
-• Random Rotation with a range of 10°
+• Random Horizontal Flip <br>
+• Random Rotation with a range of 10° <br>
 • Colour Jitter – Brightness and Contrast with a range of 0.2, Hue and Saturation with a range of 0.1
 
 Dropout layers also helped boost val_accuracy.
