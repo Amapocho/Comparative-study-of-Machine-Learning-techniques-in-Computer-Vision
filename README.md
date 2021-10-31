@@ -23,7 +23,7 @@ were : <br>
 
 Dropout layers also helped boost val_accuracy.
 
-###Choosing Epochs
+### Choosing Epochs
 
 I trained the model over a range of epochs (from 60 to 150). And for the chosen learning rate the
 model gave the best performance at around 90 epochs i.e. high accuracy without overfitting
