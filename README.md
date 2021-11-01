@@ -61,3 +61,32 @@ Rather than choosing the number of epochs manually I decided to utilise the earl
 ![Model Loss](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/ModelLoss.png)
 <br><br>
 • Training the model further on the new dataset -
+
+![Model Accuracy 2](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/ModelAccuracy2.png)
+
+![Model Loss 2](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/ModelLoss2.png)
+
+### Overfitting
+
+One drawback of the semi supervised model is that it’s overfitting. If we put the test data as the
+validation set for the fitting process it is even more clear. When we train the model on the train
+dataset, we get a val_accuracy of approximately 0.66 and a val_loss of about 0.95. However,
+when we add pseudo labels to the untrained dataset and train the model on that, accuracy falls to
+0.65 and val_loss increases to 1.02. Though this shift is minor, train_loss continues to decrease
+along with an increase in train_accuracy thus showcasing overfitting
+
+### Conclusion
+
+After running a semi-supervised model on both CNN and ResNet it is evident that the model is
+clearly overfitting and thus a supervised learning based on ResNet is the optimum solution for
+the given dataset getting us an val_accuracy of over 0.7 and a val_loss of 0.87
+
+## Self-Supervised SimCLR
+
+### Selecting Model
+
+Since training contrastive loss requires heavy computing, (two image augmentations have to be
+processed simultaneously and two backpropagations must be carried out after that) and cannot
+be done on a single GPU stream, I imported SimCLR embeddings. As classifier I framed a 3
+layered fully connected neural network and trained it by inputting the embeddings obtained after
+passing the images through the ResNet50 model. 
