@@ -53,7 +53,7 @@ maintaining a high level of accuracy. (13,925 to be exact)
 ### Choosing Epochs
 
 Rather than choosing the number of epochs manually I decided to utilise the earlyCallback method in .fit() function of Keras. I set the monitor to be val_loss and ended the training if the val_loss stopped decreasing in value.
-<br>
+<br><br>
 • Training the initial supervised classifier -
 
 ![Model Accuracy](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/ModelAccuracy.png)
