@@ -59,5 +59,5 @@ Rather than choosing the number of epochs manually I decided to utilise the earl
 ![Model Accuracy](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/ModelAccuracy.png)
 
 ![Model Loss](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/ModelLoss.png)
-<br>
+<br><br>
 • Training the model further on the new dataset -
