@@ -33,3 +33,19 @@ model gave the best performance at around 90 epochs i.e. high accuracy without o
 ![Loss](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/Loss.png)
 
 ## Semi-Supervised Learning
+
+### Choosing Model
+
+Though ResNet gave a higher test accuracy on while running supervised learning, CNN gave a better final test accuracy when we carried out semisupervised using pseudo labelling. The ResNet model overfit on the dataset extremely fast.
+
+
+![CNN Model](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/CNN.png)
+
+### Choosing Threshold
+
+I tried multiple threshold’s ranging from 0.7 all the way to 0.96, the best result on the test
+accuracy was given by 0.93. This can be justified by the fact that a threshold of 0.93 would
+produce pseudo labels on a fairly large number of images from the unlabelled data set while
+maintaining a high level of accuracy. (13,925 to be exact)
+
+![Epoch vs Validation Accuracy](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/ValAccuracy.png)
