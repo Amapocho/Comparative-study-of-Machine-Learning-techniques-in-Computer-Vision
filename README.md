@@ -90,3 +90,13 @@ processed simultaneously and two backpropagations must be carried out after that
 be done on a single GPU stream, I imported SimCLR embeddings. As classifier I framed a 3
 layered fully connected neural network and trained it by inputting the embeddings obtained after
 passing the images through the ResNet50 model. 
+
+![Classifier](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/Classifier.png)
+
+### Training the model
+
+Since we only need to train a simple classifier, overfitting isn’t much of an issue and can be
+easily avoided using image augmentations and dropout layers. Putting a dropout layer before the
+first Dense layer helps prevent overdependence on any of the 2048 features in the output of the
+ResNet50 model. Furthermore only 8 epochs are enough to obtain an optimum accuracy and
+minimum loss without overfitting on the train set.
