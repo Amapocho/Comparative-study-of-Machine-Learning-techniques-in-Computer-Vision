@@ -104,3 +104,32 @@ minimum loss without overfitting on the train set.
 ![Self Supervised Accuracy](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/SelfAccuracy.png)
 
 ![Self Supervised Loss](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/SelfLoss.png)
+
+### Auto Augmentation
+
+Previous models on all datasets have almost exclusively used manual image augmentation
+which takes experience on data manipulation.
+
+In SimCLR we have to apply two data augmentations on each image and calculate the loss
+based on the embeddings. Thus, choosing the right augmentation is going to be very important,
+choosing two augmentations that are very similar will lead to no learning as the embeddings
+generated will be inherently similar. At the same time, we do not want augmentations which will
+lead to starkly different embeddings as it will lead to a very vague and generalised final result.
+Therefore, in SimCLR if implemented properly auto augmentation can help increase the
+accuracy by a significant margin.
+
+For datasets like MNIST or OCR detection purposes, image augmentations like image ratio
+manipulation, stretching and compressing will be very useful while colour shifts wont affect the
+efficiency much
+
+On the other hand, image datasets which are used to classify objects and animals like ImageNet,
+stretching and compression should be restricted to a very small extent while augmentation
+should focus more on colour shifts and random cropping. Colour shift will prevent the algorithm
+from focussing on a given colour while cropping will prevent the algorithm from focussing on a
+specific feature of a given object/animal.
+
+By training an automated image augmentation, we can make the algorithm itself determine
+which augmentation will help create the greatest increasing in the accuracy.
+Augmentation will depend not only on the image subject but also image composition. Darkening
+an already dark image will lead to featureless images which will lead to no learning. This is an
+avenue where automated generator will give an advantage over manual augmentation.
