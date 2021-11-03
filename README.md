@@ -100,3 +100,7 @@ easily avoided using image augmentations and dropout layers. Putting a dropout l
 first Dense layer helps prevent overdependence on any of the 2048 features in the output of the
 ResNet50 model. Furthermore only 8 epochs are enough to obtain an optimum accuracy and
 minimum loss without overfitting on the train set.
+
+![Self Supervised Accuracy](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/SelfAccuracy.png)
+
+![Self Supervised Loss](https://github.com/Amapocho/Comparative-study-of-Machine-Learning-techniques/blob/main/Images/SelfLoss.png)
